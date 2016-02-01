@@ -15,6 +15,7 @@ function Survivor (name, phone, note, street, city, state, zip) {
 
 
 
+
 // User Interface Logic
 // $(document).ready(function() {
 //   $("form#IDselector").submit(function(event) {

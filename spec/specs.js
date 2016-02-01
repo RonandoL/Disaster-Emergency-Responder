@@ -10,4 +10,9 @@ describe('Survivor', function(){
     expect(testSurvivor.zip).to.equal(97204);
   });
 
+  it("will concat the address", function(){
+    var testSurvivor = new Survivor("Bob", 1234567890, "hello world", "400 SW 6th Ave, Portland, Oregon 97204")
+    expect(testSurvivor.address()).to.equal("400 SW 6th Ave, Portland, Oregon 97204");
+  });
+
 });
