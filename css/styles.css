@@ -10,3 +10,23 @@
 .survivorFocus {
   border: 1px solid #c2c2d6;
 }
+
+.center {
+  text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+.help {
+  font-size: 2.8em;
+  font-weight: bolder;
+}
+
+.survivorText {
+  background-color: #58FA82;
+  border: 1px solid #c2c2d6;
+  border-radius: 5px;
+}

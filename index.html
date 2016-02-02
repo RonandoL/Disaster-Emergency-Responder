@@ -12,11 +12,28 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="container">
+
       <div class="jumbotron">
-        <h1>Header</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+        <div class="container">
+        <div class="row">
+          <div class="col-xs-12 center">
+            <h1 class="help">EMERGENCY HELP</h1>
+          </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 center survivorText">
+            <h2>IF YOU NEED HELP, FILL OUT THE FORM BELOW</h2>
+          </div>
+          <div class="col-xs-12 col-sm-4 center">
+            <h4>RESPONDERS CLICK BUTTON</h4>
+            <button class="bt btn-lg btn-danger"type="button" name="button">RESPONDER</button>
+          </div>
+        </div>
+        </div>
+      </div>
       </div>  <!-- /Jumbotron -->
+
+      <div class="container">
 
   <!-- Form -->
           <form class="userInput">
@@ -83,17 +100,29 @@
 
             </div>  <!-- /Row -->
 
-        <!-- Results -->
+        <!-- Survivor Confirmation -->
             <div class="row">
-              <div class="col-sm-12 neighborhoods">
+              <div class="col-sm-12 center">
                 <hr>
+                <h2>Your Info Confirmation</h2>
+                <div class="col-sm-6 neighborhoods">
+                  <ol id="survivorList">
+                  </ol>
+                </div>
+                <h2>Help is on its way</h2>
+              </div>
+            </div>  <!-- /Row -->
+
+        <!-- Responder Info -->
+            <div class="row responder">
+              <div class="col-sm-12 neighborhoods">
                 <h2>Survivors in need of assistance:</h2>
                 <div class="col-sm-6">
                   <ol id="survivorList">
                   </ol>
                 </div>
               </div>
-            </div>
+            </div>  <!-- /Row -->
 
     </div>  <!-- /Container -->
 
