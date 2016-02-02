@@ -15,6 +15,20 @@ Survivor.prototype.address = function() {
 }
 
 // User Interface Logic
+
+// Reset Input Fields
+function resetFields() {
+    $("input#userName").val("");
+    $("input#userPhone").val("");
+    $("input#userStreet").val("");
+    $("input#userCity").val("");
+    $("input#userState").val("");
+    $("input#userZip").val("");
+    $("textarea#userNote").val("");
+    $("input.new-city").val("");
+    $("select#neighborhood").val("");
+}
+
 $(document).ready(function() {
   $("form.userInput").submit(function(event) {
     event.preventDefault();
@@ -31,8 +45,11 @@ $(document).ready(function() {
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
 
     // Add Survivor to neighborhood
+    $("h4#survivorConfirm").empty();
+    $(".confirmSurvivor").show();
+    $(".userInput").hide();
     if (newSurvivor.neighborhood === "SW" || "NW" || "SE" || "NE") {
-      $("h4#survivorConfirm").append("<span class='survivor'>" + newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note + "</span>")
+      $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
       $("ol#survivorList").append("<li class='survivor'>" + newSurvivor.street + "<hr></li>")
     } else {
     alert("Please enter a neighborhood.");
@@ -41,7 +58,7 @@ $(document).ready(function() {
     // Another test comment RL
     // branch change test
 
-    // Show main survivor on click
+    // RESPONDER SECTION
     $(".survivor").last().click(function() {
       $(".showSurvivor").show();
       $(".survivorName").text(newSurvivor.name);
@@ -50,7 +67,7 @@ $(document).ready(function() {
       $(".survivorNote").text(newSurvivor.note);
     });
 
-
+   resetFields();
 
   });
 });

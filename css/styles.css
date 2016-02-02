@@ -30,3 +30,12 @@
   border: 1px solid #c2c2d6;
   border-radius: 5px;
 }
+
+.confirmSurvivor {
+  display: none;
+}
+
+.boxy {
+  background-color: #ccffff;
+  padding-bottom: 300px;
+}
