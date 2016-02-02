@@ -71,8 +71,10 @@
 
                 <button class="btn btn-info" type="submit" name="button">Gimme some aid baby</button>
               </div>
+          </form>
+
         <!-- Right Div -->
-              <div class="col-sm-6 showSurvivor">
+              <div class="col-sm-6" id="showSurvivor">
                 <h2 class="survivorName"></h2>
                 <h3 class="survivorPhone"></h3>
                 <h3 class="survivorLocation"></h3>
@@ -85,38 +87,13 @@
             <div class="row">
               <div class="col-sm-12 neighborhoods">
                 <hr>
-                <h2>Survivors in need of assistance</h2>
-                <div class="col-sm-3">
-                  <h3>NW</h3>
-                  <ul id="nw">
-
-                  </ul>
-                </div>
-
-                <div class="col-sm-3">
-                  <h3>SW</h3>
-                  <ul id="sw">
-
-                  </ul>
-                </div>
-
-                <div class="col-sm-3">
-                  <h3>SE</h3>
-                  <ul id="se">
-
-                  </ul>
-                </div>
-
-                <div class="col-sm-3">
-                  <h3>NE</h3>
-                  <ul id="ne">
-
-                  </ul>
+                <h2>Survivors in need of assistance:</h2>
+                <div class="col-sm-6">
+                  <ol id="survivorList">
+                  </ol>
                 </div>
               </div>
             </div>
-          </form>
-
 
     </div>  <!-- /Container -->
 

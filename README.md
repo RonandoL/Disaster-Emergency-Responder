@@ -1,13 +1,8 @@
-# WARNING - DO NOT CLONE. 
-# DOWNLOAD ZIP INSTEAD
-#### If you clone, it will list me as a contributor and retain all the old commits, and you don't want that. Download Zip instead then change folder name.
-
-=========
-# insertApplicationName
+# Disaster Emergency Responder App
 
 #### briefDescription, dateOfCurrentVersion_
 
-#### By _**insertContributorNumberOne, insertContributorNumberTwo **_
+#### By Ronando, Chris, Timmi, Chris
 
 ## Description
 

@@ -14,12 +14,11 @@ Survivor.prototype.address = function() {
   return this.street + ", " + this.city + ", " + this.state + " " + this.zip;
 }
 
-
-
-
 // User Interface Logic
 $(document).ready(function() {
   $("form.userInput").submit(function(event) {
+    event.preventDefault();
+
     var name = $("input#userName").val();
     var phone = $("input#userPhone").val();
     var street = $("input#userStreet").val();
@@ -32,20 +31,14 @@ $(document).ready(function() {
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
 
     // Add Survivor to neighborhood
-    if (newSurvivor.neighborhood === "SW") {
-      $("ul#sw").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
-    } else if (newSurvivor.neighborhood === "SE") {
-      $("ul#se").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
-    } else if (newSurvivor.neighborhood === "NW") {
-      $("ul#nw").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
-    } else if (newSurvivor.neighborhood === "NE") {
-      $("ul#ne").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
+    if (newSurvivor.neighborhood === "SW" || "NW" || "SE" || "NE") {
+      $("ol#survivorList").append("<li class='survivor'>" + newSurvivor.street + "<hr></li>")
     } else {
     alert("Please enter a neighborhood.");
     }
 
     // Show main survivor on click
-    $(".survivor").on("click", function() {
+    $(".survivor").last().click(function() {
       $(".showSurvivor").show();
       $(".survivorName").text(newSurvivor.name);
       $(".survivorPhone").text(newSurvivor.phone);
@@ -54,7 +47,6 @@ $(document).ready(function() {
     });
 
 
-    event.preventDefault();
   });
 });
 
