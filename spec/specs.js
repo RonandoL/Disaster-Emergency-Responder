@@ -16,4 +16,14 @@ describe('Survivor', function(){
     var testSurvivor = new Survivor("Bob", 1234567890, "hello world", "400 SW 6th Ave", "Portland", "Oregon", 97204)
     expect(testSurvivor.address()).to.equal("400 SW 6th Ave, Portland, Oregon 97204");
   });
+
+  it("will add a rescue value to an object", function(){
+    var testSurvivor = new Survivor("Bob", 1234567890, "hello world", "400 SW 6th Ave", "Portland", "Oregon", 97204)
+    expect(testSurvivor.responderYes()).to.equal(true);
+  });
+
+  it("will add a rescue value to an object", function(){
+    var testSurvivor = new Survivor("Bob", 1234567890, "hello world", "400 SW 6th Ave", "Portland", "Oregon", 97204)
+    expect(testSurvivor.responderYes()).to.equal(true);
+  });
 });
