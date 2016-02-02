@@ -46,6 +46,7 @@ $(document).ready(function() {
       $(".survivorNote").text(newSurvivor.note);
     });
 
+    // test comment
 
   });
 });
