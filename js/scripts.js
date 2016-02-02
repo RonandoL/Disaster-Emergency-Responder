@@ -25,13 +25,14 @@ $(document).ready(function() {
     var city = $("input#userCity").val();
     var state = $("input#userState").val();
     var zip = $("input#userZip").val();
-    var note = $("input#userNote").val();
+    var note = $("textarea#userNote").val();
     var neighborhood = $("select#neighborhood").val();
 
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
 
     // Add Survivor to neighborhood
     if (newSurvivor.neighborhood === "SW" || "NW" || "SE" || "NE") {
+      $("h4#survivorConfirm").append("<span class='survivor'>" + newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note + "</span>")
       $("ol#survivorList").append("<li class='survivor'>" + newSurvivor.street + "<hr></li>")
     } else {
     alert("Please enter a neighborhood.");
@@ -39,7 +40,7 @@ $(document).ready(function() {
 
     // Another test comment RL
     // branch change test
-    
+
     // Show main survivor on click
     $(".survivor").last().click(function() {
       $(".showSurvivor").show();
