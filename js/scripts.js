@@ -37,6 +37,8 @@ $(document).ready(function() {
     alert("Please enter a neighborhood.");
     }
 
+    // Another test comment RL
+
     // Show main survivor on click
     $(".survivor").last().click(function() {
       $(".showSurvivor").show();
@@ -46,7 +48,7 @@ $(document).ready(function() {
       $(".survivorNote").text(newSurvivor.note);
     });
 
-    // test comment
+
 
   });
 });
