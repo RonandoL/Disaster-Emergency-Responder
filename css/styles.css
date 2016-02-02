@@ -3,6 +3,10 @@
   border-right: 1px solid #c2c2d6;
 }
 
-h3 {
+.neighborhoods h3 {
   text-align: center;
+}
+
+.survivorFocus {
+  border: 1px solid #c2c2d6;
 }

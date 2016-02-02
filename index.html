@@ -16,11 +16,12 @@
       <div class="jumbotron">
         <h1>Header</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-      </div>  <!-- /JUMBOTRON -->
+      </div>  <!-- /Jumbotron -->
 
   <!-- Form -->
           <form class="userInput">
             <div class="row">
+        <!-- Left Div -->
               <div class="col-sm-6">
                 <div class="form-group">
                   <label for="">Name:</label>
@@ -70,39 +71,48 @@
 
                 <button class="btn btn-info" type="submit" name="button">Gimme some aid baby</button>
               </div>
+        <!-- Right Div -->
+              <div class="col-sm-6 showSurvivor">
+                <h2 class="survivorName"></h2>
+                <h3 class="survivorPhone"></h3>
+                <h3 class="survivorLocation"></h3>
+                <h4 class="survivorNote"></h4>
+              </div>
 
             </div>  <!-- /Row -->
 
         <!-- Results -->
             <div class="row">
-              <hr>
-              <h2>Survivors waiting for you to get off your butt and help</h2>
-              <div class="col-sm-3 neighborhoods">
-                <h3>NW</h3>
-                <ul id="nw">
+              <div class="col-sm-12 neighborhoods">
+                <hr>
+                <h2>Survivors in need of assistance</h2>
+                <div class="col-sm-3">
+                  <h3>NW</h3>
+                  <ul id="nw">
 
-                </ul>
-              </div>
+                  </ul>
+                </div>
 
-              <div class="col-sm-3">
-                <h3>SW</h3>
-                <ul id="sw">
+                <div class="col-sm-3">
+                  <h3>SW</h3>
+                  <ul id="sw">
 
-                </ul>
-              </div>
+                  </ul>
+                </div>
 
-              <div class="col-sm-3">
-                <h3>SE</h3>
-                <ul id="se">
+                <div class="col-sm-3">
+                  <h3>SE</h3>
+                  <ul id="se">
 
-                </ul>
-              </div>
+                  </ul>
+                </div>
 
-              <div class="col-sm-3">
-                <h3>NE</h3>
-                <ul id="ne">
+                <div class="col-sm-3">
+                  <h3>NE</h3>
+                  <ul id="ne">
 
-                </ul>
+                  </ul>
+                </div>
               </div>
             </div>
           </form>

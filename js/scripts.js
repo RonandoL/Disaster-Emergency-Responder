@@ -28,22 +28,42 @@ $(document).ready(function() {
     var zip = $("input#userZip").val();
     var note = $("input#userNote").val();
     var neighborhood = $("select#neighborhood").val();
+
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
+
+    // Add Survivor to neighborhood
     if (newSurvivor.neighborhood === "SW") {
-      $("ul#sw").append("<li>" + newSurvivor.street + "<hr></li>")
-    }
-    else if (newSurvivor.neighborhood === "SE") {
-      $("ul#se").append("<li>" + newSurvivor.street + "<hr></li>")
-    }
-    else if (newSurvivor.neighborhood === "NW") {
-      $("ul#nw").append("<li>" + newSurvivor.street + "<hr></li>")
-    }
-    else if (newSurvivor.neighborhood === "NE") {
-      $("ul#ne").append("<li>" + newSurvivor.street + "<hr></li>")
+      $("ul#sw").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
+    } else if (newSurvivor.neighborhood === "SE") {
+      $("ul#se").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
+    } else if (newSurvivor.neighborhood === "NW") {
+      $("ul#nw").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
+    } else if (newSurvivor.neighborhood === "NE") {
+      $("ul#ne").append("<li><span class='survivor'>" + newSurvivor.street + "</span><hr></li>")
     } else {
     alert("Please enter a neighborhood.");
     }
 
+    // Show main survivor on click
+    $(".survivor").on("click", function() {
+      $(".showSurvivor").show();
+      $(".survivorName").text(newSurvivor.name);
+      $(".survivorPhone").text(newSurvivor.phone);
+      $(".survivorLocation").text(newSurvivor.address());
+      $(".survivorNote").text(newSurvivor.note);
+    });
+
+
     event.preventDefault();
   });
 });
+
+
+
+
+
+
+
+
+
+//
