@@ -37,13 +37,14 @@ $(document).ready(function() {
     alert("Please enter a neighborhood.");
     }
 
-    // $(".survivor").last().click(function() {
-    //   $(".showSurvivor").show();
-    //   $(".survivorName").text(newSurvivor.name);
-    //   $(".survivorPhone").text(newSurvivor.phone);
-    //   $(".survivorLocation").text(newSurvivor.address());
-    //   $(".survivorNote").text(newSurvivor.note);
-    // });
+    // Show main survivor on click
+    $(".survivor").last().click(function() {
+      $(".showSurvivor").show();
+      $(".survivorName").text(newSurvivor.name);
+      $(".survivorPhone").text(newSurvivor.phone);
+      $(".survivorLocation").text(newSurvivor.address());
+      $(".survivorNote").text(newSurvivor.note);
+    });
 
 
   });
