@@ -26,16 +26,16 @@
           </div>
           <div class="col-xs-12 col-sm-4 center">
             <h4>RESPONDERS CLICK BUTTON</h4>
-            <button class="bt btn-lg btn-danger"type="button" name="button">RESPONDER</button>
+            <a class="btn btn-lg btn-danger responderButton">RESPONDER</a>
           </div>
         </div>
         </div>
       </div>
       </div>  <!-- /Jumbotron -->
 
-      <div class="container">
+      <div class="container survivorSection">
 
-  <!-- Form -->
+      <!-- Form -->
         <div class="row">
           <form class="userInput">
             <div class="col-sm-12">
@@ -80,20 +80,20 @@
               <button class="btn btn-info" type="submit" name="button">Request Help</button>
             </div>
           </form>
-        </div>
+        </div>  <!-- /Row -->
 
         <!-- Survivor Confirmation -->
-            <div class="row confirmSurvivor center">
-              <div class="col-sm-12">
-                <hr>
-                <h3>Your Info Confirmation</h3>
-                <div class="col-sm-12 neighborhoods">
-                  <h3 id="survivorConfirm">
-                  </h3>
-                </div>
-              </div>
+        <div class="row confirmSurvivor center">
+          <div class="col-sm-12">
+            <hr>
+            <h3>Your Info Confirmation</h3>
+            <div class="col-sm-12 neighborhoods">
+              <h3 id="survivorConfirm">
+              </h3>
             </div>
-          </div>   <!-- /Row -->
+          </div>
+        </div>
+      </div>   <!-- /Container /survivorSection -->
 
             <div class="boxy center">
               <div class="container">
@@ -105,9 +105,12 @@
             <div class="container row responderSection">
               <div class="col-sm-6">
                 <h2>Survivors in need of assistance:</h2>
+
+              <!-- List of survivors -->
                 <ol id="survivorList">
                 </ol>
               </div>
+              <!-- Show all survivor info when click on survivor <li> -->
               <div class="col-sm-6" id="showSurvivor">
                 <h2><span id="survivorName"></span></h2>
                 <h3>Phone #: <span id="survivorPhone"></span></h3>

@@ -20,7 +20,6 @@ Survivor.prototype.responderYes = function() {
 }
 
 // User Interface Logic
-
 // Reset Input Fields
 function resetFields() {
     $("input#userName").val("");
@@ -35,6 +34,13 @@ function resetFields() {
 }
 
 $(document).ready(function() {
+  // Click Responder Button: Opens responder page
+  $("a.responderButton").click(function() {
+    alert("test");
+    $(".survivorSection, .boxy").hide();
+  });
+
+
   $("form.userInput").submit(function(event) {
     event.preventDefault();
 
@@ -77,6 +83,8 @@ $(document).ready(function() {
     });
 
   });
+
+
 });
 
 
