@@ -67,7 +67,7 @@ $(document).ready(function() {
     console.log(newSurvivor.name);
 
     // Append Survivor: empty previos survivor
-    // $("h3#survivorConfirm").empty();
+    $("h3#survivorConfirm").empty();
     $(".confirmSurvivor").show();
     // $(".userInput").hide();
 
