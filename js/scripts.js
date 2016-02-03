@@ -71,13 +71,11 @@ $(document).ready(function() {
 
     $("li").on("click", "#remover" ,function() {
       $(this).parent().remove();
-      // $("#showSurvivor").hide();
     });
 
     $("li").on("click", "#helpComing" ,function() {
       $(this).parent().toggleClass("inProgress");
 
-      // $("#showSurvivor").hide();
     });
 
   });
