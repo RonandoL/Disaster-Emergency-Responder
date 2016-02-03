@@ -34,19 +34,23 @@ function resetFields() {
 }
 
 $(document).ready(function() {
-  // Click Responder Button: Opens responder page
   $("a.responderButton").click(function() {
     var password = prompt("Please enter the Responder password");
     if (password === "safety first") {
       $(".survivorSection, .boxy").hide();
       $(".responderSection").show();
+      $(".survivorDiv").show();
+      $(".responderDiv").hide();
     } else {
       alert("Incorrect password");
     }
-
   });
 
+    $("a.survivorButton").click(function() {
+      $(".survivorSection").show();
+    });
 
+  // Survivor Form Submitted
   $("form.userInput").submit(function(event) {
     event.preventDefault();
 
@@ -60,11 +64,12 @@ $(document).ready(function() {
     var neighborhood = $("select#neighborhood").val();
 
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
+    console.log(newSurvivor.name);
 
     // Append Survivor: empty previos survivor
-    $("h3#survivorConfirm").empty();
+    // $("h3#survivorConfirm").empty();
     $(".confirmSurvivor").show();
-    $(".userInput").hide();
+    // $(".userInput").hide();
 
     if (newSurvivor.street === "") {
       alert("Please enter a street.");
@@ -89,20 +94,7 @@ $(document).ready(function() {
 
     $("li").on("click", "#helpComing" ,function() {
       $(this).parent().toggleClass("inProgress");
-
     });
 
   });
-
-
 });
-
-
-
-
-
-
-
-
-
-//
