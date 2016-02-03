@@ -20,7 +20,6 @@ Survivor.prototype.responderYes = function() {
 }
 
 // User Interface Logic
-
 // Reset Input Fields
 function resetFields() {
     $("input#userName").val("");
@@ -35,6 +34,14 @@ function resetFields() {
 }
 
 $(document).ready(function() {
+  // Click Responder Button: Opens responder page
+  $("a.responderButton").click(function() {
+    alert("test");
+    $(".survivorSection, .boxy").hide();
+    $(".responderSection").show();
+  });
+
+
   $("form.userInput").submit(function(event) {
     event.preventDefault();
 
@@ -49,9 +56,11 @@ $(document).ready(function() {
 
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
 
-    $("h4#survivorConfirm").empty();
+    // Append Survivor: empty previos survivor
+    $("h3#survivorConfirm").empty();
     $(".confirmSurvivor").show();
-    // $(".userInput").hide();
+    $(".userInput").hide();
+
     if (newSurvivor.street === "") {
       alert("Please enter a street.");
     } else {
@@ -79,6 +88,8 @@ $(document).ready(function() {
     });
 
   });
+
+
 });
 
 
