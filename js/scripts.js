@@ -38,6 +38,7 @@ $(document).ready(function() {
   $("a.responderButton").click(function() {
     alert("test");
     $(".survivorSection, .boxy").hide();
+    $(".responderSection").show();
   });
 
 
