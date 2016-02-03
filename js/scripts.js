@@ -35,18 +35,18 @@ function resetFields() {
 
 $(document).ready(function() {
   // Click Responder Button: Opens responder page
-  $("a.responderButton").click(function() {
+  $("a.responderButton").click(function() {  // ok
     $(".survivorSection, .boxy").hide();
     $(".responderSection").show();
-    $(".responderButtonText").text("To Add More Survivors");
-    $("a.responderButton").text("To Add More Survivors");
-    $("a.responderButton").removeClass('btn-danger').removeClass('responderButton').addClass('btn-info').addClass('survivorButton');
+    $(".survivorDiv").show();
+    $(".responderDiv").hide();
   });
 
   // Click Survivor Button on Responder page: to view survivor form
   $("a.survivorButton").click(function() {
     $(".survivorSection, .boxy").show();
   });
+
 
   // Survivor Form Submitted
   $("form.userInput").submit(function(event) {
