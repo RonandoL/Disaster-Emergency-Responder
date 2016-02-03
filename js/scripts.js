@@ -36,9 +36,9 @@ function resetFields() {
 $(document).ready(function() {
   // Click Responder Button: Opens responder page
   $("a.responderButton").click(function() {
-    alert("test");
     $(".survivorSection, .boxy").hide();
     $(".responderSection").show();
+    $(".responderButtonText").text("To Add More Survivors");
   });
 
 
