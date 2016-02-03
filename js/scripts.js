@@ -57,6 +57,7 @@ $(document).ready(function() {
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
       $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-success" id="remover">Rescued!!</button>') + ("</li>"));
+      resetFields();
   }
 
     // RESPONDER SECTION
@@ -72,8 +73,6 @@ $(document).ready(function() {
       $(this).parent().remove();
       // $("#showSurvivor").hide();
     });
-
-   resetFields();
 
   });
 });
