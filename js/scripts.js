@@ -65,7 +65,7 @@ $(document).ready(function() {
       alert("Please enter a street.");
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
-      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-success" id="remover">Rescued!!</button>') + ("</li>"));
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-danger inList"  id="helpComing">Respond</button>') + ('<button type=button class="btn btn-success inList" id="remover">Rescued</button>') + ("</li>"));
       resetFields();
   }
 
@@ -80,7 +80,11 @@ $(document).ready(function() {
 
     $("li").on("click", "#remover" ,function() {
       $(this).parent().remove();
-      // $("#showSurvivor").hide();
+    });
+
+    $("li").on("click", "#helpComing" ,function() {
+      $(this).parent().toggleClass("inProgress");
+
     });
 
   });
