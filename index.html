@@ -36,69 +36,51 @@
       <div class="container">
 
   <!-- Form -->
+        <div class="row">
           <form class="userInput">
-            <div class="row">
-        <!-- Left Div -->
-              <div class="col-sm-12">
-                <div class="form-group">
-                  <label for="">Name:</label>
-                  <input id="userName" class="form-control" type="text" name="name" value="">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Phone:</label>
-                  <input id="userPhone" class="form-control" type="text" name="name" value="">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Street:</label>
-                  <input id="userStreet" class="form-control" type="text" name="name" value="">
-                </div>
-
-                <div class="form-group">
-                  <label for="">City:</label>
-                  <input id="userCity" class="form-control" type="text" name="name" value="">
-                </div>
-
-                <div class="form-group">
-                  <label for="">State:</label>
-                  <input id="userState" class="form-control" type="text" name="name" value="">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Zip:</label>
-                  <input id="userZip" class="form-control" type="text" name="name" value="">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Note:</label>
-                  <textarea id="userNote" class="form-control" type="text" name="name" value=""></textarea>
-                </div>
-
-                <div class="form-group">
-                  <label for="neighborhood">Neighborhood:</label>
-                    <select class="form-control" id="neighborhood">
-                      <option value=""></option>
-                      <option value="SW">Southwest</option>
-                      <option value="SE">Southeast</option>
-                      <option value="NW">Northwest</option>
-                      <option value="NE">Northeast</option>
-                    </select>
-                </div>
-
-                <button class="btn btn-info" type="submit" name="button">Gimme some aid baby</button>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="">Name:</label>
+                <input id="userName" class="form-control" type="text" name="name" value="">
               </div>
+              <div class="form-group">
+                <label for="">Phone:</label>
+                <input id="userPhone" class="form-control" type="text" name="name" value="">
+              </div>
+              <div class="form-group">
+                <label for="">Street:</label>
+                <input id="userStreet" class="form-control" type="text" name="name" value="">
+              </div>
+              <div class="form-group">
+                <label for="">City:</label>
+                <input id="userCity" class="form-control" type="text" name="name" value="">
+              </div>
+              <div class="form-group">
+                <label for="">State:</label>
+                <input id="userState" class="form-control" type="text" name="name" value="">
+              </div>
+              <div class="form-group">
+                <label for="">Zip:</label>
+                <input id="userZip" class="form-control" type="text" name="name" value="">
+              </div>
+              <div class="form-group">
+                <label for="">Note:</label>
+                <textarea id="userNote" class="form-control" type="text" name="name" value=""></textarea>
+              </div>
+              <div class="form-group">
+                <label for="neighborhood">Neighborhood:</label>
+                  <select class="form-control" id="neighborhood">
+                    <option value=""></option>
+                    <option value="SW">Southwest</option>
+                    <option value="SE">Southeast</option>
+                    <option value="NW">Northwest</option>
+                    <option value="NE">Northeast</option>
+                  </select>
+              </div>
+              <button class="btn btn-info" type="submit" name="button">Request Help</button>
+            </div>
           </form>
-
-        <!-- Right Div -->
-              <div class="col-sm-6" id="showSurvivor">
-                <h2 class="survivorName"></h2>
-                <h3 class="survivorPhone"></h3>
-                <h3 class="survivorLocation"></h3>
-                <h4 class="survivorNote"></h4>
-              </div>
-
-            </div>  <!-- /Row -->
+        </div>
 
         <!-- Survivor Confirmation -->
             <div class="row confirmSurvivor center">
@@ -120,17 +102,19 @@
             </div>
 
         <!-- Responder Info -->
-            <!-- <div class="row responder">
-              <div class="col-sm-12 neighborhoods">
+            <div class="container row">
+              <div class="col-sm-6">
                 <h2>Survivors in need of assistance:</h2>
-                <div class="col-sm-6">
-                  <ol id="survivorList">
-                  </ol>
-                </div>
+                <ol id="survivorList">
+                </ol>
               </div>
-            </div>   -->
-
-    <!-- </div> /Container -->
+              <div class="col-sm-6" id="showSurvivor">
+                <h2><span id="survivorName"></span></h2>
+                <h3>Phone #: <span id="survivorPhone"></span></h3>
+                <h3>Address: <span id="survivorLocation"></span></h3>
+                <p>Note: <span id="survivorNote"></span></p>
+              </div>
+            </div>
 
   </body>
 </html>

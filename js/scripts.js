@@ -51,28 +51,28 @@ $(document).ready(function() {
 
     $("h4#survivorConfirm").empty();
     $(".confirmSurvivor").show();
-    $(".userInput").hide();
+    // $(".userInput").hide();
     if (newSurvivor.street === "") {
       alert("Please enter a street.");
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
-      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-success" id="rescued">Rescued!!</button>') + ("</li>"));
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-success" id="remover">Rescued!!</button>') + ("</li>"));
+      resetFields();
   }
 
     // RESPONDER SECTION
     $(".survivor").last().click(function() {
       $("#showSurvivor").show();
-      $(".survivorName").text(newSurvivor.name);
-      $(".survivorPhone").text(newSurvivor.phone);
-      $(".survivorLocation").text(newSurvivor.address());
-      $(".survivorNote").text(newSurvivor.note);
+      $("#survivorName").text(newSurvivor.name);
+      $("#survivorPhone").text(newSurvivor.phone);
+      $("#survivorLocation").text(newSurvivor.address());
+      $("#survivorNote").text(newSurvivor.note);
     });
 
-    $("#rescued").on("click", function() {
+    $("li").on("click", "#remover" ,function() {
       $(this).parent().remove();
+      // $("#showSurvivor").hide();
     });
-
-   resetFields();
 
   });
 });
