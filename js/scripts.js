@@ -20,6 +20,20 @@ Survivor.prototype.responderYes = function() {
 }
 
 // User Interface Logic
+
+// Reset Input Fields
+function resetFields() {
+    $("input#userName").val("");
+    $("input#userPhone").val("");
+    $("input#userStreet").val("");
+    $("input#userCity").val("");
+    $("input#userState").val("");
+    $("input#userZip").val("");
+    $("textarea#userNote").val("");
+    $("input.new-city").val("");
+    $("select#neighborhood").val("");
+}
+
 $(document).ready(function() {
   $("form.userInput").submit(function(event) {
     event.preventDefault();
@@ -30,23 +44,22 @@ $(document).ready(function() {
     var city = $("input#userCity").val();
     var state = $("input#userState").val();
     var zip = $("input#userZip").val();
-    var note = $("input#userNote").val();
+    var note = $("textarea#userNote").val();
     var neighborhood = $("select#neighborhood").val();
 
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
 
-    // Add Survivor to neighborhood
-
+    $("h4#survivorConfirm").empty();
+    $(".confirmSurvivor").show();
+    $(".userInput").hide();
     if (newSurvivor.street === "") {
       alert("Please enter a street.");
     } else {
+      $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
       $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-success" id="rescued">Rescued!!</button>') + ("</li>"));
   }
 
-    // Another test comment RL
-    // branch change test
-
-    // Show main survivor on click
+    // RESPONDER SECTION
     $(".survivor").last().click(function() {
       $("#showSurvivor").show();
       $(".survivorName").text(newSurvivor.name);
@@ -59,6 +72,7 @@ $(document).ready(function() {
       $(this).parent().remove();
     });
 
+   resetFields();
 
   });
 });
