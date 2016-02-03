@@ -36,9 +36,14 @@ function resetFields() {
 $(document).ready(function() {
   // Click Responder Button: Opens responder page
   $("a.responderButton").click(function() {
-    alert("test");
-    $(".survivorSection, .boxy").hide();
-    $(".responderSection").show();
+    var password = prompt("Please enter the Responder password");
+    if (password === "safety first") {
+      $(".survivorSection, .boxy").hide();
+      $(".responderSection").show();
+    } else {
+      alert("Incorrect password");
+    }
+
   });
 
 
