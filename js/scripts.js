@@ -49,7 +49,8 @@ $(document).ready(function() {
 
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
 
-    $("h4#survivorConfirm").empty();
+    // Append Survivor: empty previos survivor
+    $("h3#survivorConfirm").empty();
     $(".confirmSurvivor").show();
     // $(".userInput").hide();
     if (newSurvivor.street === "") {
