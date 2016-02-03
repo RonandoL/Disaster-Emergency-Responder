@@ -69,7 +69,8 @@ $(document).ready(function() {
     // Append Survivor: empty previos survivor
     $("h3#survivorConfirm").empty();
     $(".confirmSurvivor").show();
-    // $(".userInput").hide();
+    $(".userInput").hide();
+    $(".boxy").show();
 
     if (newSurvivor.street === "") {
       alert("Please enter a street.");
