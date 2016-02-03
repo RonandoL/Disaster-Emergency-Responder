@@ -1,3 +1,7 @@
+.responderSection {
+  display: none;
+}
+
 .col-sm-3 {
   border-left: 1px solid #c2c2d6;
   border-right: 1px solid #c2c2d6;
