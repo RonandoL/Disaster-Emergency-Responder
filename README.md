@@ -2,7 +2,7 @@
 
 #### briefDescription, dateOfCurrentVersion_
 
-#### By Ronando, Chris, Timmi, Chris
+#### By Ronando, Chris, Timmi, Matt
 
 ## Description
 
