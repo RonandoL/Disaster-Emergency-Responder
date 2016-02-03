@@ -39,3 +39,7 @@
   background-color: #ccffff;
   padding-bottom: 300px;
 }
+
+#showSurvivor {
+  display: none;
+}
