@@ -7,11 +7,16 @@ function Survivor (name, phone, note, street, city, state, zip, neighborhood) {
   this.state = state;
   this.zip = zip;
   this.neighborhood = neighborhood;
+  // this.rescue = false;
 }
 
 // Ptototype for Address
 Survivor.prototype.address = function() {
   return this.street + ", " + this.city + ", " + this.state + " " + this.zip;
+}
+
+Survivor.prototype.responderYes = function() {
+  return this.rescue = true;
 }
 
 // User Interface Logic
@@ -31,23 +36,28 @@ $(document).ready(function() {
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
 
     // Add Survivor to neighborhood
-    if (newSurvivor.neighborhood === "SW" || "NW" || "SE" || "NE") {
-      $("ol#survivorList").append("<li class='survivor'>" + newSurvivor.street + "<hr></li>")
+
+    if (newSurvivor.street === "") {
+      alert("Please enter a street.");
     } else {
-    alert("Please enter a neighborhood.");
-    }
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-success" id="rescued">Rescued!!</button>') + ("</li>"));
+  }
 
     // Another test comment RL
+    // branch change test
 
     // Show main survivor on click
     $(".survivor").last().click(function() {
-      $(".showSurvivor").show();
+      $("#showSurvivor").show();
       $(".survivorName").text(newSurvivor.name);
       $(".survivorPhone").text(newSurvivor.phone);
       $(".survivorLocation").text(newSurvivor.address());
       $(".survivorNote").text(newSurvivor.note);
     });
 
+    $("#rescued").on("click", function() {
+      $(this).parent().remove();
+    });
 
 
   });
