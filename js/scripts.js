@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     // var password = prompt("Please enter the Responder password");
     // if (password === "1") {
- 
+
 
       $(".survivorSection, .boxy").hide();
       $(".responderSection").show();
@@ -74,7 +74,6 @@ $(document).ready(function() {
     var neighborhood = $("select#neighborhood").val();
 
     var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
-    console.log(newSurvivor.name);
 
     // Append Survivor: empty previos survivor
     $("h3#survivorConfirm").empty();
@@ -86,9 +85,9 @@ $(document).ready(function() {
       alert("Please enter a street.");
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
-      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
+      $("ol#survivorList").append(("<li><span class='rescueinProgress'>RESCUE IN PROGRESS: </span><span class='survivor'>") + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
       resetFields();
-      }
+    }
 
     // RESPONDER SECTION
     $(".survivor").last().click(function() {
@@ -114,6 +113,14 @@ $(document).ready(function() {
       $(this).siblings("span.survivor").addClass("inProgress");
       $(this).siblings(".inProgress").after("<a class='btn btn-warning inList cancelResponse'>Cancel Response</a>");
       $(this).remove();
+      $(".rescueinProgress").show();
+    });
+
+    $("li").on("click", ".cancelResponse" ,function()  {
+      $(this).siblings("span.survivor").removeClass("inProgress");
+      $(this).siblings(".remover").before("<a class='btn btn-danger inList helpComing'>Respond</a>");
+      $(this).remove();
+      $(".rescueinProgress").hide();
     });
 
   });
