@@ -35,15 +35,15 @@ function resetFields() {
 
 $(document).ready(function() {
   $("a.responderButton").click(function() {
-    var password = prompt("Please enter the Responder password");
-    if (password === "safety first") {
+    // var password = prompt("Please enter the Responder password");
+    // if (password === "1") {
       $(".survivorSection, .boxy").hide();
       $(".responderSection").show();
       $(".survivorDiv").show();
       $(".responderDiv").hide();
-    } else {
-      alert("Incorrect password");
-    }
+    // } else {
+    //   alert("Incorrect password");
+    // }
   });
 
     $("a.survivorButton").click(function() {
@@ -75,9 +75,9 @@ $(document).ready(function() {
       alert("Please enter a street.");
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
-      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span>") + ('<button type=button class="btn btn-danger inList"  id="helpComing">Respond</button>') + ('<button type=button class="btn btn-success inList" id="remover">Rescued</button>') + ("</li>"));
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
       resetFields();
-  }
+      }
 
     // RESPONDER SECTION
     $(".survivor").last().click(function() {
@@ -88,12 +88,21 @@ $(document).ready(function() {
       $("#survivorNote").text(newSurvivor.note);
     });
 
-    $("li").on("click", "#remover" ,function() {
+    $("li").on("click", ".remover" ,function() {
       $(this).parent().remove();
     });
 
-    $("li").on("click", "#helpComing" ,function() {
-      $(this).parent().toggleClass("inProgress");
+    // $(".helpComing").click(function() {
+    //   var sibling = $(this).siblings("span.survivor");
+    //   sibling.addClass("inProgress");
+    //   sibling.after("<a class='btn btn-warning inList cancelResponse'>Cancel Response</a>")
+    //   $(this).remove();
+    // });
+
+    $("li").on("click", ".helpComing" ,function() {
+      $(this).siblings("span.survivor").addClass("inProgress");
+      $(this).siblings(".inProgress").after("<a class='btn btn-warning inList cancelResponse'>Cancel Response</a>");
+      $(this).remove();
     });
 
   });
