@@ -91,7 +91,7 @@ $(document).ready(function() {
       $("#survivorLocation").text(newSurvivor.address());
       $("#survivorNote").text(newSurvivor.note);
       $("#location").empty();
-      $("#location").append("<iframe src='http://maps.google.com/maps?q=" + newSurvivor.street + newSurvivor.city + "&output=embed' width='600' height='450' frameborder='0' style='border:0' allowfullscreen'></iframe>")
+      $("#location").append("<iframe src='http://maps.google.com/maps?q=" + newSurvivor.street + newSurvivor.city + "&output=embed' width='100%' height='450' frameborder='0' style='border:0' allowfullscreen'></iframe>")
     });
 
     $("li").on("click", ".remover" ,function() {
