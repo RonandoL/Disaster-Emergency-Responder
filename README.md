@@ -6,35 +6,31 @@
 
 ## Description
 
-_insertDetailedDescriptionsOfApplication_
+_This application allows the user to request aid in the event of a natural or manmade disaster.  The application is meant to compliment the efforts of 911 responders, who may be overwhelmed with calls.  In the event of a disaster the user enters the relevant information pertaining to their location and medical or other needs. At a minimum the user must enter the street on which they are located. The user then sees a confirmation of their information.  This application also services pre-approved responders, by giving them a list of people in need of their services, complete with their current location and situation status.  The pre-approved responders may also update the users information status, by indicating that they as responders are either on the way to help, have helped, or can no longer help the user. Responders may also add individuals in need of aid to the user list._
 
 ## Setup/Installation Requirements
 
-* _list_
-* _all_
-* _requirements_
+* _an internet connection_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+
+
+_Currently, if an individual would like to add features or work on the application, a github account and the ability to be added as a collaborator would be helpful._
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_There are no known bugs, at this time_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_If you have any questions, issues, or concerns please feel free to contact the repository master._
 
 ## Technologies Used
 
-* _list_
-* _all_
-* _tech_
-* _used_
+* _JavaScript and JQuery_
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
 
 ### License
 
 *This software is licensed under the MIT license.*
 
-Copyright (c) 2016 **By insertContributorsHere**
+Copyright (c) 2016 **By Ronando, Chris, Timmi, Matt**
