@@ -78,14 +78,14 @@ $(document).ready(function() {
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
 
-      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.city + ": " + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
 
       resetFields();
     }
 
     // RESPONDER SECTION
     $(".survivor").last().click(function() {
-      $("#showSurvivor").show();
+      $("#showDetails").show();
       $("#survivorName").text(newSurvivor.name);
       $("#survivorPhone").text(newSurvivor.phone);
       $("#survivorLocation").text(newSurvivor.address());
@@ -93,6 +93,7 @@ $(document).ready(function() {
     });
 
     $("li").on("click", ".remover" ,function() {
+      $("#showDetails").hide();
       $(this).parent().remove();
     });
 
