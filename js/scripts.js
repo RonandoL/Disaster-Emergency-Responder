@@ -34,9 +34,10 @@ function resetFields() {
 }
 
 $(document).ready(function() {
+  // Responder Button clicked
   $("a.responderButton").click(function() {
     var password = prompt("Please enter the Responder password");
-    if (password === "safety first") {
+    if (password === "1") {
       $(".survivorSection, .boxy").hide();
       $(".responderSection").show();
       $(".survivorDiv").show();
@@ -46,8 +47,14 @@ $(document).ready(function() {
     }
   });
 
+    // Survivor Button clicked
     $("a.survivorButton").click(function() {
       $(".survivorSection").show();
+      $(".userInput").show();
+      $(".confirmSurvivor, .boxy").hide();
+      $(".responderSection").hide();
+      $(".survivorDiv").hide();
+      $(".responderDiv").show();
     });
 
   // Survivor Form Submitted
