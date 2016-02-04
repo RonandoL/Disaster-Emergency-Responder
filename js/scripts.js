@@ -22,9 +22,9 @@ function resetFields() {
     $("input#userName").val("");
     $("input#userPhone").val("");
     $("input#userStreet").val("");
-    $("select#city").val("");
+    // $("select#city").val("");
     $("textarea#userNote").val("");
-    // $("input.new-city").val("");      <---------------- What is this??
+    // $("input.new-city").val("");      <---------------- What is this?? Why would we know?!
 }
 
 $(document).ready(function() {
@@ -67,7 +67,6 @@ $(document).ready(function() {
     var city = $("select#city").val();
     var note = $("textarea#userNote").val();
 
-
     var newSurvivor = new Survivor (name, phone, note, street, city);
 
     // Append Survivor: empty previos survivor
@@ -80,9 +79,7 @@ $(document).ready(function() {
       alert("Please enter a street.");
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
-
       $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.city + ": " + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
-
       resetFields();
     }
 
@@ -93,6 +90,8 @@ $(document).ready(function() {
       $("#survivorPhone").text(newSurvivor.phone);
       $("#survivorLocation").text(newSurvivor.address());
       $("#survivorNote").text(newSurvivor.note);
+      $("#location").empty();
+      $("#location").append("<iframe src='http://maps.google.com/maps?q=" + newSurvivor.street + newSurvivor.city + "&output=embed' width='600' height='450' frameborder='0' style='border:0' allowfullscreen'></iframe>")
     });
 
     $("li").on("click", ".remover" ,function() {
