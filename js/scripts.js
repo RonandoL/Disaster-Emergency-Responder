@@ -1,18 +1,15 @@
-function Survivor (name, phone, note, street, city, state, zip, neighborhood) {
+function Survivor (name, phone, note, street, city) {
   this.name = name;
   this.phone = phone;
   this.note = note;
   this.street = street;
   this.city = city;
-  this.state = state;
-  this.zip = zip;
-  this.neighborhood = neighborhood;
   // this.rescue = false;
 }
 
 // Ptototype for Address
 Survivor.prototype.address = function() {
-  return this.street + ", " + this.city + ", " + this.state + " " + this.zip;
+  return this.street + ", " + this.city;
 }
 
 Survivor.prototype.responderYes = function() {
@@ -25,12 +22,9 @@ function resetFields() {
     $("input#userName").val("");
     $("input#userPhone").val("");
     $("input#userStreet").val("");
-    $("input#userCity").val("");
-    $("input#userState").val("");
-    $("input#userZip").val("");
+    $("select#city").val("");
     $("textarea#userNote").val("");
-    $("input.new-city").val("");
-    $("select#neighborhood").val("");
+    // $("input.new-city").val("");      <---------------- What is this??
 }
 
 $(document).ready(function() {
@@ -39,7 +33,7 @@ $(document).ready(function() {
 
     // var password = prompt("Please enter the Responder password");
     // if (password === "1") {
- 
+
 
       $(".survivorSection, .boxy").hide();
       $(".responderSection").show();
@@ -67,13 +61,10 @@ $(document).ready(function() {
     var name = $("input#userName").val();
     var phone = $("input#userPhone").val();
     var street = $("input#userStreet").val();
-    var city = $("input#userCity").val();
-    var state = $("input#userState").val();
-    var zip = $("input#userZip").val();
+    var city = $("select#city").val();
     var note = $("textarea#userNote").val();
-    var neighborhood = $("select#neighborhood").val();
 
-    var newSurvivor = new Survivor (name, phone, note, street, city, state, zip, neighborhood);
+    var newSurvivor = new Survivor (name, phone, note, street, city);
     console.log(newSurvivor.name);
 
     // Append Survivor: empty previos survivor
@@ -86,7 +77,7 @@ $(document).ready(function() {
       alert("Please enter a street.");
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
-      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.city + ": " + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
       resetFields();
       }
 
