@@ -3,7 +3,8 @@
 }
 
 .jumbotron {
-  background-color: #CD2C0C;
+  background-image: url("../img/firefighter-red.png");
+  width: 100%;
 }
 
 .jumbotron h1, .responderButtonText {
