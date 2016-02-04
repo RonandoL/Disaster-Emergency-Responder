@@ -77,6 +77,7 @@ $(document).ready(function() {
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
       $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.city + ": " + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.city + ": " + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
       resetFields();
     }
 
