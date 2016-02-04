@@ -121,7 +121,19 @@
 
         <!-- Responder Info -->
             <div class="container row responderSection">
-              <div class="col-sm-6">
+              <div class"row" id="showDetails">
+                <div class="col-sm-6" id="showSurvivor">
+                  <h2><span id="survivorName"></span></h2>
+                  <h3>Phone #: <span id="survivorPhone"></span></h3>
+                  <h3>Address: <span id="survivorLocation"></span></h3>
+                  <p>Note: <span id="survivorNote"></span></p>
+                </div>
+                <div class="col-sm-6">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11179.393756604766!2d-122.681977!3d45.5332554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1454611283668" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="col-sm-12">
                 <h2>Survivors in need of assistance:</h2>
 
               <!-- List of survivors -->
@@ -129,12 +141,7 @@
                 </ol>
               </div>
               <!-- Show all survivor info when click on survivor <li> -->
-              <div class="col-sm-6" id="showSurvivor">
-                <h2><span id="survivorName"></span></h2>
-                <h3>Phone #: <span id="survivorPhone"></span></h3>
-                <h3>Address: <span id="survivorLocation"></span></h3>
-                <p>Note: <span id="survivorNote"></span></p>
-              </div>
+
             </div>
 
   </body>

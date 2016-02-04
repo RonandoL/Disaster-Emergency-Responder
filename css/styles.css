@@ -81,9 +81,12 @@ body {
   display: none;
 }
 
-#showSurvivor {
+
+
+#showDetails {
   display: none;
 }
+
 
 .inProgress {
   color: green;
