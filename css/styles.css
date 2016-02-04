@@ -86,3 +86,7 @@ li {
   margin-left: 8px;
   margin-bottom: 6px;
 }
+
+img {
+  max-width: 75px;
+}
