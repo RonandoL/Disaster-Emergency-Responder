@@ -22,9 +22,9 @@ function resetFields() {
     $("input#userName").val("");
     $("input#userPhone").val("");
     $("input#userStreet").val("");
-    $("select#city").val("");
+    // $("select#city").val("");
     $("textarea#userNote").val("");
-    // $("input.new-city").val("");      <---------------- What is this??
+    // $("input.new-city").val("");      <---------------- What is this?? Why would we know?!
 }
 
 $(document).ready(function() {
@@ -64,7 +64,6 @@ $(document).ready(function() {
     var city = $("select#city").val();
     var note = $("textarea#userNote").val();
 
-
     var newSurvivor = new Survivor (name, phone, note, street, city);
 
     // Append Survivor: empty previos survivor
@@ -77,15 +76,13 @@ $(document).ready(function() {
       alert("Please enter a street.");
     } else {
       $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
-
-      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
-
+      $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.city + ": " + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
       resetFields();
     }
 
     // RESPONDER SECTION
     $(".survivor").last().click(function() {
-      $("#showSurvivor").show();
+      $("#showDetails").show();
       $("#survivorName").text(newSurvivor.name);
       $("#survivorPhone").text(newSurvivor.phone);
       $("#survivorLocation").text(newSurvivor.address());
@@ -93,6 +90,7 @@ $(document).ready(function() {
     });
 
     $("li").on("click", ".remover" ,function() {
+      $("#showDetails").hide();
       $(this).parent().remove();
     });
 
