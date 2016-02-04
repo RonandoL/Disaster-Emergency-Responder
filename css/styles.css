@@ -3,7 +3,8 @@
 }
 
 .jumbotron {
-  background-color: #CD2C0C;
+  background-image: url("../img/firefighter-red.png");
+  width: 100%;
 }
 
 .jumbotron h1, .responderButtonText {
@@ -66,7 +67,6 @@ body {
   display: none;
 }
 
-
 #showSurvivor {
   display: none;
 }
@@ -91,9 +91,4 @@ li {
 
 img {
   max-width: 75px;
-}
-
-.rescueinProgress {
-  display: none;
-  color: #df8a13;
 }
