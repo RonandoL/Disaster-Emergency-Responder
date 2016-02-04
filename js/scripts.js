@@ -58,6 +58,9 @@ $(document).ready(function() {
   $("form.userInput").submit(function(event) {
     event.preventDefault();
 
+    // Goes to top of page on form submission click
+    $('html, body').animate({ scrollTop: 0 });
+
     var name = $("input#userName").val();
     var phone = $("input#userPhone").val();
     var street = $("input#userStreet").val();
