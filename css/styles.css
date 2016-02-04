@@ -10,9 +10,15 @@
 .jumbotron h1, .responderButtonText {
   color: white;
 }
+
 body {
   background-color: #d9d9d9;
 }
+
+.userInput {
+  margin-bottom: 25px;
+}
+
 .col-sm-3 {
   border-left: 1px solid #c2c2d6;
   border-right: 1px solid #c2c2d6;
@@ -91,4 +97,9 @@ li {
 
 img {
   max-width: 75px;
+}
+
+.centerButton {
+  margin: auto;
+  text-align: center;
 }
