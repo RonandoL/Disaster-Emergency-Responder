@@ -92,3 +92,8 @@ li {
 img {
   max-width: 75px;
 }
+
+.rescueinProgress {
+  display: none;
+  color: #df8a13;
+}
