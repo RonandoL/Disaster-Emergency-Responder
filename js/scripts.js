@@ -28,20 +28,17 @@ function resetFields() {
 }
 
 $(document).ready(function() {
-  // Responder Button clicked
   $("a.responderButton").click(function() {
 
-    // var password = prompt("Please enter the Responder password");
-    // if (password === "1") {
-
-
+    var password = prompt("Please enter the Responder password");
+    if (password === "1") {
       $(".survivorSection, .boxy").hide();
       $(".responderSection").show();
       $(".survivorDiv").show();
       $(".responderDiv").hide();
-    // } else {
-    //   alert("Incorrect password");
-    // }
+    } else {
+      alert("Incorrect password");
+    }
   });
 
     // Survivor Button clicked

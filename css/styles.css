@@ -14,7 +14,7 @@ html {
   width: 100%;
 }
 
-.jumbotron h1, .responderButtonText {
+.jumbotron h1 {
   color: white;
 }
 
@@ -68,12 +68,21 @@ body {
 .help {
   font-size: 2.8em;
   font-weight: bolder;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .survivorText {
-  background-color: #FFFBFA;
-  border: 1px solid #c2c2d6;
+  background-color:rgba(28, 59, 88, 0.7);
   border-radius: 5px;
+  padding-top: 10px;
+}
+
+#helpText {
+  color: #E5D5D6;
+  font-weight: 100;
+  font-size: 32px;
+  font-weight: 100;
+  font-family: 'Roboto Slab', serif;
 }
 
 .confirmSurvivor {
@@ -93,6 +102,7 @@ body {
 li {
   font-weight: bold;
   color: #c31d1d;
+  font-size: 18px;
 }
 
 .inList {
@@ -110,4 +120,8 @@ img {
 .centerButton {
   margin: auto;
   text-align: center;
+}
+
+.responderButton, .survivorButton {
+  margin-top: 25px;
 }
