@@ -37,7 +37,7 @@ body {
 
 .boxy {
   color: white;
-  background-color: #093D75;
+  background-color: #1c3b58;
   margin-top: 15px;
   padding-bottom: 30px;
 }
@@ -74,7 +74,6 @@ body {
 .survivorText {
   background-color:rgba(5, 55, 123, 0.67);
   border-radius: 5px;
-  width: inherit;
 }
 
 #helpText {
