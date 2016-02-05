@@ -60,6 +60,7 @@ $(document).ready(function() {
 
     // Goes to top of page on form submission click
     $('html, body').animate({ scrollTop: 0 });
+    $('.survivorText').hide();
 
     var name = $("input#userName").val();
     var phone = $("input#userPhone").val();
@@ -78,7 +79,7 @@ $(document).ready(function() {
     if (newSurvivor.street === "") {
       alert("Please enter a street.");
     } else {
-      $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br>" + "Note: " + newSurvivor.note)
+      $("h3#survivorConfirm").append(newSurvivor.name + ", " + newSurvivor.phone + "<br>" + newSurvivor.address() + "<br><br>" + "Note: " + newSurvivor.note)
       $("ol#survivorList").append(("<li><span class='survivor'>") + newSurvivor.city + ": " + newSurvivor.street + ("</span><a class='btn btn-danger inList helpComing'>Respond</a><a class='btn btn-success inList remover'>Rescued</a></li>"));
       resetFields();
     }
