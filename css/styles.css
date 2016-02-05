@@ -72,14 +72,15 @@ body {
 }
 
 .survivorText {
-  background-color:rgba(5, 55, 123, 0.67);
+  background-color:rgba(28, 59, 88, 0.7);
   border-radius: 5px;
+  padding-top: 10px;
 }
 
 #helpText {
-  color: #fff;
+  color: #E5D5D6;
   font-weight: 100;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 100;
   font-family: 'Roboto Slab', serif;
 }
@@ -101,6 +102,7 @@ body {
 li {
   font-weight: bold;
   color: #c31d1d;
+  font-size: 18px;
 }
 
 .inList {
